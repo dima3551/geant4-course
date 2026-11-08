@@ -40,7 +40,6 @@ All of this is free to use and distribute.
 | 7 | [Data collection: sensitive detectors](7-Data-collection-from-the-simulation-SensitiveDetector/README.md) | Own sensitive detector and hits, primitive scorers and filters, hits collections, two output files | `stripSD_lec7`: the lecture 6 detector with five more collection methods |
 | 8 | [Particle trajectory in field](8-Particle-trajectory-in-field/README.md) (deck is a draft) | Numerical integration of motion in a field, field classes, accuracy parameters, field maps, step limiter | `beamline_lec8`: ⁴⁸Ca¹⁷⁺ beamline with a quadrupole and a dipole |
 | 9 | Parametrization | Own UI commands with `G4GenericMessenger`, rebuilding geometry between runs, macro loops, scans of quadrupole gradients | `beamline_lec9`: quadrupole-doublet beamline with a gradient scan |
-
 | 10 | User-created processes | How to implement your own physics in Geant4 | Work in progress |
 
 

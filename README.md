@@ -70,11 +70,11 @@ The executable has the same name as the project folder. Choose the build paralle
 - commented out (`//#define DRAW`) – batch mode: the program runs the number of events set in `main` and exits;
 - enabled – a Qt UI session starts and `vis.mac` draws the geometry; start a run yourself, for example with `/run/beamOn 100`.
 
-Lectures 2–10 are in batch mode by default.  The numbers of events and worker threads are set in each `main`. The examples do not take a macro file from the command line.
+Lectures 2–10 are in batch mode by default.  The numbers of events and worker threads are set in each `main`. Most of examples do not take a macro file from the command line.
 
 ## Output conventions
 
-- ROOT files are written to the working directory. Open one with `root -l test_output_0.root`, then type `new TBrowser()` to look at the histograms. –web=off option is advised for ROOT.
+- ROOT files are written to the working directory. Open one with `root -l test_output_0.root`, then type `new TBrowser()` to look at the histograms. –-web=off option is advised for ROOT.
 - Histogram names in the lecture READMEs are the exact names passed to `CreateH1` / `CreateH2`; the axes use the units each example fills with.
 - Every worker thread fills its own copy of the histograms. They are merged into the master's histograms before the master writes the file.
 - The examples use time-based random seeds, so exact numbers differ a little between runs. Each lecture README lists the expected features and comparisons.

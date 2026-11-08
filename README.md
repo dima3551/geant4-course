@@ -49,7 +49,7 @@ All of this is free to use and distribute.
 - **Geant4 11.4.3**, built from source with multithreading, Qt visualization and the data sets. Lecture 1 walks through the whole installation.
 - **CMake** and a C++17 compiler (the usual Linux build tools).
 - **QtCreator** – optional, but the lectures use it as the IDE.
-- **ROOT** to look at the output histograms. The applications do not link to ROOT: they write `.root` files through Geant4's `G4AnalysisManager`.
+- **ROOT** to look at the output histograms. The applications do not use ROOT directly: they write `.root` files through Geant4's `G4AnalysisManager`.
 - On Windows: **WSL** (Windows Subsystem for Linux) with Ubuntu. On Linux everything works natively.
 
 ## Build and run
@@ -63,7 +63,9 @@ cd build
 ./basic_model_lec2
 ```
 
-The executable has the same name as the project folder. Choose the build parallelism for your machine. Run from the build directory: CMake copies the macros and, where needed, the spectrum, CAD or field-map files there. In QtCreator open the project's `CMakeLists.txt` and set the working directory to the build directory.
+The executable has the same name as the project folder. Choose the build parallelism for your machine. Run from the build directory: CMake copies the macros and, where needed, the spectrum, CAD or field-map files there. 
+
+In QtCreator open the project's `CMakeLists.txt` and set the working directory to the build directory.
 
 **Batch mode or UI mode.** Each project's main `.cc` file has a `#define DRAW` line near the top:
 

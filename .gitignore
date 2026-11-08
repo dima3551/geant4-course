@@ -1,0 +1,40 @@
+# build directories
+build/
+Build/
+cmake-build-*/
+.qtcreator/
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# compiled objects / binaries
+*.o
+*.obj
+*.so
+*.a
+*.exe
+
+# Geant4 runtime output
+G4cout.txt
+G4cerr.txt
+*.wrl
+*.heprep
+*.hepevt
+
+# ROOT
+*.root
+
+# editor/IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+*Zone.Identifier*
+
+# Local lecture discussion notes
+/lectures_memory.md
+

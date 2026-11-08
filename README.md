@@ -39,7 +39,7 @@ All of this is free to use and distribute.
 | 6 | [Data collection: user actions](6-Data-collection-from-the-simulation-UserActions/README.md) | All user actions and where they are called; track stacks; accumulables; killing tracks; merging between threads | `strip_lec6`: Si strip detector and an Am-241 alpha source, one distribution collected four ways |
 | 7 | [Data collection: sensitive detectors](7-Data-collection-from-the-simulation-SensitiveDetector/README.md) | Own sensitive detector and hits, primitive scorers and filters, hits collections, two output files | `stripSD_lec7`: the lecture 6 detector with five more collection methods |
 | 8 | [Particle trajectory in field](8-Particle-trajectory-in-field/README.md) | Numerical integration of motion in a field, field classes, accuracy parameters, field maps, step limiter | `beamline_lec8`: ⁴⁸Ca¹⁷⁺ beamline with a quadrupole and a dipole |
-| 9 | Parametrization | Own UI commands with `G4GenericMessenger`, rebuilding geometry between runs, macro loops, scans of quadrupole gradients | `beamline_lec9`: quadrupole-doublet beamline with a gradient scan.  Work in progress |
+| 9 | [Parametrization](9-Parametrization/README.md) | Own UI commands with `G4GenericMessenger`, rebuilding geometry between runs, macro loops, scans of quadrupole gradients | `beamline_lec9`: quadrupole-doublet beamline with a gradient scan.  Work in progress |
 | 10 | User-created processes | How to implement your own physics in Geant4 | Work in progress |
 
 

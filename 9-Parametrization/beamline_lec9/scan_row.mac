@@ -1,0 +1,4 @@
+# One row of the scan, executed by the outer loop in scan.mac
+# Quad1 gradient {G1} is fixed here
+# Inner loop: scan_point.mac is executed for each quad2 gradient, its value is in {G2}
+/control/loop scan_point.mac G2 {minGradient2} {maxGradient2} {stepGradient}

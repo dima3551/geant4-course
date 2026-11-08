@@ -1,0 +1,29 @@
+# Scan of both quadrupole gradients - the same scan as the loop in main
+# Run it in batch mode from the build directory:
+#   ./beamline_lec9 scan.mac
+# main has already called runManager->Initialize(), so there is no /run/initialize here
+#
+# The scan uses three files, because /control/loop always executes a macro file:
+#   scan.mac       - sets parameters, outer loop over quad1 gradient
+#   scan_row.mac   - inner loop over quad2 gradient
+#   scan_point.mac - sets both gradients and makes one run
+
+# 0 - commands are not printed, 2 - every command and comment is printed
+/control/verbose 0
+/run/verbose 0
+
+# Aliases are text variables: {name} in any later command is replaced by the value
+# All scan parameters are defined here once, scan_row.mac and scan_point.mac only use them
+# Gradients in T/m. RunAction books the scan histograms from the range set in main
+# (-40...40, step 1) - with another range only the ntuple is filled correctly
+/control/alias minGradient1 -40
+/control/alias maxGradient1 40
+/control/alias minGradient2 -40
+/control/alias maxGradient2 40
+/control/alias stepGradient 1
+# Number of ions in each run
+/control/alias nEvents 1000
+
+# Outer loop: scan_row.mac is executed for each quad1 gradient
+# The loop counter is also an alias - its current value is in {G1}
+/control/loop scan_row.mac G1 {minGradient1} {maxGradient1} {stepGradient}

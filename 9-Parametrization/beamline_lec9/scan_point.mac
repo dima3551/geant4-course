@@ -1,0 +1,8 @@
+# One point of the scan = one run, executed by the inner loop in scan_row.mac
+# Aliases {G1} and {G2} are set by the loops, {nEvents} by scan.mac
+/beamline/quad1Gradient {G1}
+/beamline/quad2Gradient {G2}
+# Fields are created in ConstructSDandField(), so new gradients work only after geometry rebuild
+# true - old geometry is deleted first, as ReinitializeGeometry(true) in main
+/run/reinitializeGeometry true
+/run/beamOn {nEvents}

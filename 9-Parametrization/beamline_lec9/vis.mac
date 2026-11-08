@@ -1,0 +1,46 @@
+/vis/open OGL 600x600-0+0
+
+/vis/viewer/set/autoRefresh false
+/vis/verbose errors
+
+# Draw geometry:
+/vis/drawVolume
+
+# Specify view angle:
+/vis/viewer/set/viewpointVector -1 0 0
+/vis/viewer/set/lightsVector -1 0 0
+
+# Specify style (surface, wireframe, auxiliary edges,...)
+/vis/viewer/set/style surface
+/vis/viewer/set/auxiliaryEdge false
+/vis/viewer/set/lineSegmentsPerCircle 100
+#
+# Draw smooth trajectories at end of event, showing trajectory points
+# as markers 2 pixels wide:
+/vis/scene/add/trajectories smooth
+
+
+#Set up color of different particles
+/vis/modeling/trajectories/create/drawByParticleID
+
+/vis/modeling/trajectories/drawByParticleID-0/set e- blue
+/vis/modeling/trajectories/drawByParticleID-0/set e+ red
+/vis/modeling/trajectories/drawByParticleID-0/set gamma green
+/vis/modeling/trajectories/drawByParticleID-0/set alpha yellow
+
+#Need this for multithreading mode
+/vis/multithreading/maxEventQueueSize 100
+
+
+# To superimpose all of the events from a given run:
+/vis/scene/endOfEventAction accumulate 100
+
+#Draw first quadrupole magnetic field, larger number = more arrows
+#/vis/set/volumeForField Quadrupole1PV
+#/vis/scene/add/magneticField 15 fullArrow
+
+#
+# Axes, scale, etc.
+#/vis/scene/add/scale   # Simple scale line
+/vis/scene/add/axes    # Simple axes: x=red, y=green, z=blue.
+/vis/scene/add/eventID # Drawn at end of event

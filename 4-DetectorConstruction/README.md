@@ -20,7 +20,7 @@ Geometry and materials in more depth than lecture 2: complex shapes, Boolean sol
 A clover-style HPGe detector – four germanium crystals arranged like a four-leaf clover – built in two ways so they can be compared:
 
 - **Boolean version** (`#define BOOLEAN_CLOVER`, default): each crystal is a cylinder with a blind hole and two flattened sides so the crystals can sit close together, placed four times in a loop with rotations.
-- **CAD version** (`#define STL_CLOVER`): a clover shape imported from `clover_ascii.stl` through the supplied CADMesh header. It is a single unsegmented volume, not four separate crystals.
+- **CAD version** (`#define STL_CLOVER`): a clover shape imported from `clover_ascii.stl` through the supplied CADMesh header just to show the principle.
 
 Source and physics are reused from lecture 3.
 

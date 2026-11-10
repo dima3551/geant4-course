@@ -77,7 +77,7 @@ One file for the whole scan, **`beamline_optimization.root`**. The master opens 
 | H2 5 | `SigmaSquareSum` | σx² + σy², mm², over (Q1, Q2) |
 | Ntuple | `Scan` | One row per run: `quad1Gradient`, `quad2Gradient` (T/m), `transported`, `sigmaX`, `sigmaY` (mm) |
 
-H2 0, H2 1 and H1 0 in the file are from the last run only. σx and σy are the rms of the positions in `Detector`. Every run prints its gradients, σx, σy and the number of transported ions.
+ σx and σy are the rms of the positions in `Detector`. Every run prints its gradients, σx, σy and the number of transported ions.
 
 ### Expected result (from the deck, 1,000 ions per point)
 
@@ -86,8 +86,8 @@ H2 0, H2 1 and H1 0 in the file are from the last run only. σx and σy are the 
 - Smallest spot: σx² + σy² ≈ 2.5 mm² (σx ≈ 1.5, σy ≈ 0.6 mm) at Q1 = 31, Q2 = −21 T/m, with about 58 % of the ions.
 - Mirror solution: Q1 = −31, Q2 = 20 T/m – here Q1 focuses y first; about 4 mm² and 61 %.
 
-With 1,000 ions per point the statistical error of the transmission is about 1.5 %, so the best point can move by a step or two between scans. The whole scan takes about 25 minutes with 16 threads. The seed is time-based, so your numbers will differ a little.
+With 1,000 ions per point the statistical error of the transmission is about 1.5 %, so the best point can move by a step or two between scans.  The seed is time-based, so your numbers will differ a little.
 
 ## Homework
 
-Scan ±3 T/m around the smallest spot with a step of 0.5 T/m and 10,000 ions per point, compare with the coarse scan – how much of the "best" point at 1,000 ions was statistics; make `/beamline/energy` a method that also recalculates Bρ and the dipole field and rebuilds the geometry, check that the beam reaches the detector at 200 and 300 MeV; add a command for the quadrupole length and find the length and gradients that give the smallest spot with at least 30 % transmission, with no gradient larger than 10 T/m – both quadrupoles have the same length, so the scan is three nested loops (length, Q1, Q2), not four.
+Scan ±3 T/m around the smallest spot with a step of 0.25 T/m and 10,000 ions per point, compare with the coarse scan; make `/beamline/energy` a method that also recalculates Bρ and the dipole field and rebuilds the geometry, check that the beam reaches the detector at 200 and 300 MeV; add a command for the quadrupole length and find the length and gradients that give the smallest spot with at least 30 % transmission, with no gradient larger than 10 T/m – both quadrupoles have the same length, so the scan is three nested loops (length, Q1, Q2), not four.

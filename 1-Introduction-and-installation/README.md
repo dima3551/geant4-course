@@ -20,7 +20,7 @@ There is no course project in this lecture. Geant4's own basic example **B4a** i
 - **Geant4 environment and QtCreator:** adding `source ~/geant4/install/bin/geant4.sh` to `.bashrc`, installing QtCreator, opening `examples/basic/B4/B4a/CMakeLists.txt`, configuring, building and running it with the visualization window.
 - **What `CMakeLists.txt` does:** CMake prepares the build system and `make` compiles; the file says where Geant4 is, which `.cc` files belong to the program, which executable to build, which libraries to link and which files to copy to the build folder.
 - **Installing ROOT from the official ready-made download** – no compilation, a few minutes:
-  - dependencies: `cmake g++ gcc libx11-dev libxpm-dev libxft-dev libxext-dev libssl-dev libgif-dev libjpeg-dev libtiff-dev git wget cmake-curses-gui liblz4-dev libxxhash-dev libpcre2-dev libcrypt-dev libtbb-dev python3-dev libgsl-dev libfftw3-dev libzstd-dev libvdt-dev` (`libvdt-dev` is needed so that CMake projects can find ROOT);
+  - dependencies: `cmake g++ gcc libx11-dev libxpm-dev libxft-dev libxext-dev libssl-dev libgif-dev libjpeg-dev libtiff-dev git wget cmake-curses-gui liblz4-dev libxxhash-dev libpcre2-dev libcrypt-dev libtbb-dev python3-dev libgsl-dev libfftw3-dev libzstd-dev libvdt-dev` ;
   - in `~`: `wget https://root.cern/download/root_v6.40.04.Linux-ubuntu26.04-x86_64-gcc15.2.tar.gz`, unpack it with `tar -xzf`, then delete the archive – this creates `~/root`;
   - the file name contains the Ubuntu version: on another distro or version take the matching file from https://root.cern/install/all_releases/; if `~/root` already exists from an earlier attempt, remove it first with `rm -rf ~/root`;
   - adding `source ~/root/bin/thisroot.sh` to `.bashrc` and starting `root`.
@@ -28,7 +28,7 @@ There is no course project in this lecture. Geant4's own basic example **B4a** i
 - **Optional: building ROOT from source** – only if the downloaded ROOT gives serious trouble and nothing helps (better done at home, up to 3 hours): remove the downloaded `~/root`, create `~/root/source`, `build` and `install`, `git clone --branch latest-stable`, `ccmake` with `http`, `xrootd` and `builtin_xrootd` switched off and `CMAKE_INSTALL_PREFIX=~/root/install`, `make -jN install`, then point `.bashrc` to the new location with `sed -i 's|root/bin/|root/install/bin/|' ~/.bashrc`.
 - **A cheat sheet of Linux terminal commands:** `pwd`, `ls`, `cd`, `mkdir`, `cp`, `mv`, `rm`, `clear`, `explorer.exe .` (open the current folder in Windows Explorer), TAB completion, command history, Ctrl+C, Ctrl+Shift+C / Ctrl+Shift+V.
 
-## Expected result – "it all works" checklist
+## Expected result:
 
 - `geant4-config --version` prints `11.4.3`.
 - `geant4-config --check-datasets` shows the data sets as installed.

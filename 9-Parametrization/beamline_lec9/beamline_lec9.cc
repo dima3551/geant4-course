@@ -15,7 +15,7 @@
 
 
 //Uncomment this line if you want ui and geometry drawing
- #define DRAW
+ //#define DRAW
 
 
 //Beamline for 48Ca ions: two quadrupoles, 30 degree dipole and a detector plane

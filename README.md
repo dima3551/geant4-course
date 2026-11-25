@@ -10,6 +10,8 @@ Each lecture has a slide deck (`.pptx`) and, from lecture 2 on, a small but comp
 
 All of this is free to use and distribute. 
 
+You can download the full repository using command **git clone https://github.com/dima3551/geant4-course/** in your Linux terminal.
+
 ## What you will learn
 
 - Installing Geant4 and ROOT from source on Windows (through WSL) or Linux, and building Geant4 applications with CMake and QtCreator.
